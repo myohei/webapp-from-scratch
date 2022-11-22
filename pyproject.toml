@@ -16,7 +16,19 @@ uvicorn = {extras = ["standard"], version = "^0.20.0"}
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^5.0.4"
+black = "^22.10.0"
+flake8-isort = "^5.0.3"
+mypy = "^0.991"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[flake8]
+max-line-length = 88
+max-complexity = 20
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
