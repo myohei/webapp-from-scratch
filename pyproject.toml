@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "webapp-from-scratch"
+version = "0.1.0"
+description = ""
+authors = ["myohei <yohei.maeda.11@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "webapp_from_scratch"}]
+
+[tool.poetry.dependencies]
+python = "3.11"
+fastapi = "^0.87.0"
+sqlalchemy = ">=2.0.0b"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^5.0.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
