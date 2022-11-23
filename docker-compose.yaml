@@ -26,18 +26,6 @@ services:
       - ./scripts/postgres/init-data.sh:/docker-entrypoint-initdb.d/init-data.sh
     ports:
       - "5433:5432"
-  author:
-    image: "registry.supertokens.io/supertokens/supertokens-postgresql"
-    environment:
-      - POSTGRESQL_USER=${POSTGRES_AUTH_USER}
-      - POSTGRESQL_PASSWORD=${POSTGRES_AUTH_PASSWORD}
-      - POSTGRESQL_HOST=db
-      - POSTGRESQL_PORT=5432
-      - POSTGRESQL_DATABASE_NAME=${POSTGRES_AUTH_DATABASE}
-    ports:
-      - "3567:3567"
-    depends_on:
-      - db
 
 volumes:
   db_storage:
